@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     <h3>Congrats! You ordered {{request.session.quantity}} {{request.session.name}}! We charged your credit card {{request.session.total}}</h3>
+
+     <a href="{% url 'clear_cart' %}">Clear cart and keep shopping!</a>
+</body>
+</html>

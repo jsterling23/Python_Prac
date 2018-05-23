@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Display Data</title>
+</head>
+<body>
+
+     <h2>This has been {{request.session.count}} submissions</h2>
+
+     <h3>Data is as follows: </h3>
+     <p>My Name is: {{name}}</p>
+     <p>My Dojo Location: {{dojo_location}}</p>
+     <p>My Fav Language: {{favorite_language}}</p>
+     <p>Comment: {{comment}}</p>
+
+
+     <a href="{% url 'delete_session' %}">Delete Session Counter</a>
+</body>
+</html>

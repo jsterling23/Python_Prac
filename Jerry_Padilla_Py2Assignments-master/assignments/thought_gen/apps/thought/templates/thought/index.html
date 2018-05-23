@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <title>Index Page</title>
+</head>
+<body>
+
+     {% for user in data %}
+          <p>First name = {{user.first_name}}</p>
+          <p>Last name = {{user.last_name}}</p>
+          <p>Email = {{user.email}}</p>
+     {% endfor %}
+
+
+     <div class="jumbotron">
+          <h2>Welcome to the thought project</h2>
+          <h3>My goal here is to create a generator that accepts random thoughts by you or anyone. Stores them in the database, then pulls random thoughts out when you click the 'generate' button</h3>
+
+          <h4>Easy.. hum... I guess we will see</h4>
+
+          <a href="{% url 'thought_form' %}">Click here to add a though</a>
+     </div>
+
+
+
+</body>
+</html>
